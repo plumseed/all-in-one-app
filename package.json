@@ -5,9 +5,11 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "electron-forge start",
+    "start": "cross-env NODE_ENV=development electron-forge start",
+    "build": "webpack --config webpack.renderer.config.js && electron-forge package",
     "package": "electron-forge package",
-    "make": "electron-forge make"
+    "make": "webpack --config webpack.renderer.config.js && electron-forge make"
+    
   },
   "keywords": [],
   "author": "",
@@ -39,10 +41,4 @@
     "react-dom": "^19.1.0",
     "react-router-dom": "^7.6.1"
   }
-}
-
-"scripts": {
-  "start": "cross-env NODE_ENV=development electron-forge start",
-  "build": "webpack --config webpack.renderer.config.js && electron-forge package",
-  "make": "webpack --config webpack.renderer.config.js && electron-forge make"
 }
