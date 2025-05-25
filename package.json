@@ -2,14 +2,13 @@
   "name": "all-in-one-app",
   "version": "1.0.0",
   "description": "A cross-platform all-in-one application",
-  "main": "index.js",
+  "main": "src/main.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "cross-env NODE_ENV=development electron-forge start",
     "build": "webpack --config webpack.renderer.config.js && electron-forge package",
     "package": "electron-forge package",
     "make": "webpack --config webpack.renderer.config.js && electron-forge make"
-    
   },
   "keywords": [],
   "author": "",
@@ -27,6 +26,7 @@
     "@electron-forge/plugin-fuses": "^7.8.1",
     "@electron/fuses": "^1.8.0",
     "babel-loader": "^10.0.0",
+    "cross-env": "^7.0.3",
     "css-loader": "^7.1.2",
     "electron": "36.3.1",
     "html-webpack-plugin": "^5.6.3",
