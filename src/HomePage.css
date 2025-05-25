@@ -1,0 +1,22 @@
+/* src/HomePage.css */
+
+.home-container {
+  display: grid;
+  gap: 16px;
+  padding: 20px;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+/* 宽度 < 768px 时 2 列 */
+@media (max-width: 768px) {
+  .home-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* 宽度 < 480px 时 1 列 */
+@media (max-width: 480px) {
+  .home-container {
+    grid-template-columns: 1fr;
+  }
+}

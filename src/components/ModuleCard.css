@@ -1,0 +1,27 @@
+/* src/components/ModuleCard.css */
+
+.module-card {
+  background: var(--card-bg, #f9f9f9);
+  color: var(--text-color, #333);
+  border-radius: 8px;
+  padding: 16px;
+  text-align: center;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.module-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+.module-card.placeholder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0.6;
+  font-size: 1.2em;
+}
+.module-icon {
+  width: 48px;
+  height: 48px;
+  margin-bottom: 8px;
+}
