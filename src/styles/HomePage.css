@@ -1,0 +1,21 @@
+.home-container {
+  display: grid;
+  gap: 16px;
+  padding: 20px;
+  /* 桌面端 3 列 */
+  grid-template-columns: repeat(3, 1fr);
+}
+
+/* 移动端：宽度 < 768px 时 2 列 */
+@media (max-width: 768px) {
+  .home-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* 更小屏幕：宽度 < 480px 时 1 列 */
+@media (max-width: 480px) {
+  .home-container {
+    grid-template-columns: 1fr;
+  }
+}
